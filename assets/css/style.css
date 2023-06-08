@@ -47,7 +47,7 @@ body{
   align-items: center;
   margin-bottom: 44px;
 }
-.clock::after{
+.clock::before{
   content: '';
   position: absolute;
   width: 8px;
@@ -55,6 +55,7 @@ body{
   background: #2f363e;
   border: 3px solid #ffff;
   border-radius: 50%;
+  z-index: 10000;
 }
 
 .clock span{
@@ -81,21 +82,45 @@ body{
   height: 300px;
   border: 2px solid rgba(0,0,0,0.25);
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 10;
 }
 
 .circle i{
   position: absolute;
   width: 6px;
   height: 50%;
-  background: red;
+  background: var(--clr);
+  opacity: 0.5;
+  transform-origin: bottom;
+  transform:scale(0.5);
 }
+
+
+/*#hghghghhghg*/
+
 
 .circle2{
   width: 240px;
   height: 240px;
+  z-index: 9;
 }
 
 .circle3{
   width: 180px;
   height: 180px;
+  z-index: 8;
+}
+
+.circle:before{
+  content: "";
+  position: absolute;
+  top: -8.5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--clr);
+  box-shadow: 0 0 20px var(--clr),0 0 60px var(--clr);
 }
