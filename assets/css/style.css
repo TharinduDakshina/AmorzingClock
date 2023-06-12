@@ -121,8 +121,3 @@ body{
   box-shadow: 0 0 20px var(--clr),0 0 60px var(--clr);
 }
 
-.circle{
-  background: #04fc43;
-  opacity: 0.1;
-}
-
